@@ -2,7 +2,10 @@
     background-color: #242f42;
 }
 .login-wrap{
-    background: #324157;
+    background-image: url("./../static/img/wxbg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
 }
 .plugins-tips{
     background: #eef1f6;

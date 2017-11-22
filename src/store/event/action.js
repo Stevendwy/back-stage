@@ -1,13 +1,30 @@
 export default {
-	addNum({ commit, state }, id) {
-		//点击下一题，记录答案id，判断是否是最后一题，如果不是则跳转下一题
-		commit('REMEER_ANSWER',id);
-		if (state.itemNum < state.itemDetail.length) {
-			commit('ADD_ITEMNUM', 1);
-		}
+	addEvent: ({commit}, param) => commit('ADDEVENT',{item:param}),
+	eventDone: ({commit}, param) => {
+		commit('EVENTDONE', {id:param})
 	},
-	//初始化信息
-	initializeData({ commit }) {
-		commit('INITIALIZE_DATA');
+
+	eventTodo: ({commit}, param) => {
+		commit('EVENTODO', {id:param})
+	},
+
+	eventCancel: ({commit}, param) => {
+		commit('EVENTCANCEL', {id:param})
+	},
+
+	clearEvent: ({commit}, param) => {
+		commit('CLEAREVENT')
+	},
+
+	delEvent: ({commit},param) => {
+		commit('DELEVENT', param)
+	},
+
+	editEvent: ({commit}, param) => {
+		commit('EDITEVENT',param)
+	},
+
+	uploadEvent: () => {
+		commit('UPLOADEVENT',param)
 	}
 }

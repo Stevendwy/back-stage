@@ -40,6 +40,15 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'style-loader!css-loader!sass-loader'
+          }
+        }
+    },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
