@@ -21,7 +21,7 @@ export default new Router({
           component: resolve => require(['@/components/pagecontent/Changepassword.vue'], resolve)
         },{
           path: '/1.1',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/echarts/dashboard.vue'], resolve)
         },{
           path: '/2.1',
           component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
@@ -60,13 +60,19 @@ export default new Router({
           component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
         },{
           path: '/5.5',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/mycenter/mycenter.vue'], resolve) , children:[
+            {path: '/', component: resolve => require(['@/components/mycenter/order/withdraw/withdraw.vue'],resolve)},
+        ]
         },{
           path: '/5.6',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/mycenter/mycenter.vue'],resolve), children:[
+            {path: '/', component: resolve => require(['@/components/mycenter/order/account/account.vue'],resolve)},
+        ]
         },{
           path: '/6.1',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/mycenter/mycenter.vue'],resolve), children:[
+            {path: '/', component: resolve => require(['@/components/mycenter/order/deallog/deallog.vue'],resolve)},
+        ]
         },{
           path: '/7.1',
           component: resolve => require(['@/components/pagecontent/Changepassword.vue'], resolve)
