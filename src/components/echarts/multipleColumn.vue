@@ -156,7 +156,7 @@
   background-size: 100% 100%;
   .main{
     width: 100%;
-    height: calc(100% - 100px);
+    height: e('calc(100% - 100px)') ;
     margin-top: -15px;
   }
 }

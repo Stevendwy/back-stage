@@ -45,8 +45,8 @@
   export default {
       props: {
           myChart: {
-              type: Object,
-              default: {}
+            type: Object,
+            default: {}
           }
       },
       data (){
