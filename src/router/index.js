@@ -24,7 +24,7 @@ export default new Router({
           component: resolve => require(['@/components/echarts/dashboard.vue'], resolve)
         },{
           path: '/2.1',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/note/note.vue'], resolve)
         },{
           path: '/2.2',
           component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)

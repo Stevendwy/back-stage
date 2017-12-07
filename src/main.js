@@ -6,6 +6,12 @@ import router from './router'
 import ElementUI from '@/lib/mint'
 import store from '@/store/index'
 import axios from '@/lib/axios'
+import VueToast from 'vue2-toast'
+import 'vue2-toast/lib/toast.css'
+
+Vue.use(VueToast, {
+  defaultType: 'center'
+})
 
 
 Vue.config.productionTip = false
