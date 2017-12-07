@@ -30,7 +30,7 @@
            </div>
            <div class="pro_list" v-show="pro_filter_flag">
                <ul>
-                    <li v-for="(pro,index) in pro_list" @click="pro_toggle(pro,index)">
+                    <li v-for="(pro,index) in pro_list" @click="pro_toggle(pro,index)" :key="index">
                         <checkbox :isChecked="pro.selected"></checkbox>
                         <span class="name">{{pro.name}}</span>
                     </li>

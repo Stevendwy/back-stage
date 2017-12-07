@@ -3,7 +3,8 @@
       <el-button size="medium" 
             v-for="(item,index) in btnlist" 
             :class="btnindex == index ? 'btnactive' : ''"
-            @click="btnClick(index)">{{item}}</el-button>
+            @click="btnClick(index)"
+            :key="index">{{item}}</el-button>
   </div>
 </template>
 
