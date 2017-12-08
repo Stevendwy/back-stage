@@ -3,7 +3,12 @@
        <h1>{{name}}</h1>
        <div class="legend-wrapper">
            <ul>
-               <li v-for="(legend,index) in legendArr" v-on:mouseout="donwplay(index)" v-on:mouseover="highlight(index)" :style="styleArr[index]" @click="legendToggle(legend)">
+               <li v-for="(legend,index) in legendArr" 
+               v-on:mouseout="donwplay(index)" 
+               v-on:mouseover="highlight(index)" 
+               :style="styleArr[index]" 
+               @click="legendToggle(legend)"
+               :key="index">
                     {{legend.name}}
                </li>
            </ul>
@@ -27,13 +32,13 @@
       data(){
           return {
               styleArr: [],
-              color: this.$store.state.color
+              color: this.$store.getters.getColor
           }
       },
       methods: {
           init() {
               this.color.forEach((color) => {
-        this.styleArr.push({
+                this.styleArr.push({
                       background: color,
                       border: '1px solid '+ color
                   })
