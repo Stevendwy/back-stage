@@ -10,22 +10,26 @@
  import echarts from 'echarts'
  import header from './header.vue'
  import filter from './filter.vue'
+ import { mapActions } from 'vuex'
  export default {
     data() {
         return {
         legendArr: [],
-        color: this.$store.state.color,
+        color: this.$store.getters.getColor,
         myChart: {},
         name: '折线图'
         }
     },
     methods: {
+        ...mapActions([
+            'charts_push'
+        ]),
         init() {
         this.legendArr = this.myChart.getOption().series
         this.legendArr.forEach((data) => {
             data.selected = true;
         })
-        this.$store.state.charts.push(this.myChart)
+        this.$store.dispatch('charts_push', this.myChart)
         window.addEventListener('resize', function() {
             this.myChart.resize()
         }.bind(this))

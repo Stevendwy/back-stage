@@ -5,11 +5,6 @@ Vue.use(Vuex) // this.$store对象
 
 import echart from './echart'
 
-// const state = {
-//   charts: [],  //图标数据
-//   color: ['#325B69', '#698570', '#AE5548', '#6D9EA8', '#9CC2B0', '#C98769'],
-// }
-
 export default new Vuex.Store({
   modules: {
     // event,

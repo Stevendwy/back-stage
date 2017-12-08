@@ -12,6 +12,7 @@
   import china from 'echarts/map/js/china'
   import header from './header.vue'
   import filter from './filter.vue'
+  import { mapActions } from 'vuex'
 
   const USER_NAME = 'elastic'
   const PSW = 'elasticl@ethical.cn'
@@ -24,13 +25,16 @@
       data (){
           return {
               legendArr: [],
-              color: this.$store.state.color,
+              color: this.$store.getters.getColor,
               myChart: {},
               geoCoordMap: {},
               name: '散点图'
           }
       },
       methods: {
+          ...mapActions([
+              'charts_push'
+          ]),
           init(options){
               this.myChart = echarts.init(document.querySelector('.point .main'))
               this.myChart.setOption(options)
@@ -38,7 +42,7 @@
               this.legendArr.forEach((data) => {
                   data.selected = true
               })
-              this.$store.state.charts.push(this.myChart)
+              this.$store.dispatch('charts_push', this.myChart)
               window.addEventListener('resize', function(){
                   this.myChart.resize()
               }.bind(this))
@@ -47,7 +51,7 @@
               axios.get('static/data/cityData.json').then((res) => {
                 this.geoCoordMap = res.data
                 this.$nextTick(() => {
-                this.getMyChart()
+                    this.getMyChart()
                 })
             })
           },

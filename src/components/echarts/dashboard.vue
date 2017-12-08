@@ -4,7 +4,7 @@
            <div class="item one" @click="clickChart('1')" style="transform: translate(-22.4%,-33.5%) scale(0.33)">
                 <multipleColumn></multipleColumn>
             </div>
-            <!-- <div class="item two" @click="clickChart('2')" style="transform: translate(-22.4%,0.5%) scale(0.33)">
+            <div class="item two" @click="clickChart('2')" style="transform: translate(-22.4%,0.5%) scale(0.33)">
                 <column></column>
             </div>
             <div class="item three" @click="clickChart('3')" style="transform: translate(-22.4%,34.5%) scale(0.33)">
@@ -12,7 +12,7 @@
             </div>
             <div class="item four active" @click="clickChart('4')" style="transform: translate(43.7%, 0) scale(1)">
                 <point></point>
-            </div> -->
+            </div>
 
       </div>
   </div>
