@@ -4,11 +4,12 @@ import Vuex from 'vuex'
 Vue.use(Vuex) // this.$store对象
 
 import echart from './echart'
+import theme from './theme'
 
 export default new Vuex.Store({
   modules: {
     // event,
-    // theme,
+    theme,
     echart
   }
 })
