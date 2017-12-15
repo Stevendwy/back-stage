@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" :class="{'sidebar-hidden':isShow}">
       <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router>
         <template v-for="item in data">
           <template v-if="item.subgroup">
@@ -138,6 +138,7 @@
           ]
       }
     },
+    props:['isShow'],
     computed: {
       onRoutes() {
         //退出处理
@@ -154,15 +155,18 @@
     width: 200px;
     background: #fff;
     min-height: 100vh;
-      &>ul{
-        height:100%;
-      }
-      &>*.el-menu{
-          border-right: transparent;
-          width: 100%;
-          background-color: #d8d8d8;
-          box-shadow: 2px 0 8px 0 rgba(0,0,0,0.4);
-      }
+    &.sidebar-hidden{
+        display: none;
+    }
+    &>ul{
+    height:100%;
+    }
+    &>*.el-menu{
+        border-right: transparent;
+        width: 100%;
+        background-color: #d8d8d8;
+        box-shadow: 2px 0 8px 0 rgba(0,0,0,0.4);
+    }
  }
 </style>
 

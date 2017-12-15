@@ -1,6 +1,9 @@
 <template>
   <div class="head">
-      <div class="logo">Boss 管理系统</div>
+      <div class="logo">
+          Boss 管理系统
+          <el-button type="primary" round @click="toggleBar">目录</el-button>
+      </div>
       <div class="user-info">
           <el-dropdown trigger="click" @command="handleCommand">
               <span class="el-dropdown-link">
@@ -34,6 +37,9 @@
                     localStorage.removeItem('ov_username')
                     this.$router.push('/')
                 }
+            },
+            toggleBar(){
+                this.$store.dispatch('showsidebar', 'toggle')
             }
         }
     }

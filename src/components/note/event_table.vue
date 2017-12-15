@@ -44,7 +44,7 @@
 
 <script>
     export default {
-        data:() => {
+        data: function(){
             return {
                 is_edit:false,
                 active: false,
@@ -169,8 +169,8 @@
                     box-sizing: border-box;
                     text-overflow: ellipsis;
                     vertical-align: middle;
-                    border-left:1px solid #eee;
-                    border-top:1px solid #eee;
+                    border-right:1px solid #eee;
+                    border-bottom:1px solid #eee;
                 }
                 button{
                     padding:3px 7px;

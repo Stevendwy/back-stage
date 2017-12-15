@@ -1,7 +1,7 @@
 <template>
   <div class="home">
       <v-header></v-header>
-      <v-sidebar></v-sidebar>
+      <v-sidebar :is-show="getShowbar"></v-sidebar>
       <div class="content">
           <transition name="move" mode="out-in">
               <router-view></router-view>
@@ -14,10 +14,20 @@
   import vHeader from './page/head.vue'
   import vSidebar from './page/sidebar.vue'
   export default {
+      data(){
+          return {
+
+          }
+      },
       components: {
           'vHeader': vHeader,
           'vSidebar': vSidebar
-      }
+      },
+      computed: {
+          getShowbar(){
+              return this.$store.getters.getShowbar
+          }
+        }
   }
 </script>
 

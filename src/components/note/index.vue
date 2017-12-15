@@ -1,7 +1,7 @@
 <template>
   <div id="note" :class="[getTheme]">
       <n-header @tools="changePages"></n-header>
-      <!-- <section class="container" :class="{'hide': table}">
+      <section class="container" :class="{'hide': table}">
           <n-add></n-add>
           <n-list></n-list>
           <n-sidebar :is-show="tools"
@@ -14,22 +14,19 @@
       <transition name="dialog">
           <n-dialog v-show="dialog" :msg="tips" @cancel="dialog = false" @sure="sureDialog"></n-dialog>
       </transition>
-
-      
-      <n-theme :is-show="theme" @close="theme = false"></n-theme>
-       -->
        <n-table @deldialog="delData" :is-show="table" @close="table = false"></n-table>
+       <n-theme :is-show="theme" @close="theme = false"></n-theme>
   </div>
 </template>
 
 <script>
   import nHeader from './header.vue'
-//   import nAdd from './event_add.vue'
+  import nAdd from './event_add.vue'
   import nTable from './event_table.vue'
-//   import nList from './event_list.vue'
-//   import nSidebar from './sidebar.vue'
-//   import nDialog from './dialog.vue'
-//   import nTheme from './theme.vue'
+  import nList from './event_list.vue'
+  import nSidebar from './sidebar.vue'
+  import nDialog from './dialog.vue'
+  import nTheme from './theme.vue'
 
 
   export default {
@@ -49,12 +46,12 @@
       },
     components: {
         nHeader, 
-        // nAdd, 
-        // nSidebar,
-        // nDialog, 
+        nAdd, 
+        nSidebar,
+        nDialog, 
         nTable,
-        // nList, 
-        // nTheme
+        nList, 
+        nTheme
     },
     computed: {
         getTheme(){
