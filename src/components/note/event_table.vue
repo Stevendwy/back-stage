@@ -136,17 +136,22 @@
 
 <style lang="less">
 .event-all{
-        position: absolute;
-        left:0px;
-        top:70px;
-        right:0;
-        bottom:0;
-        transform: translateX(-100%);
-        transition: transform .5s;
+        // position: absolute;
+        // left:0px;
+        // top:70px;
+        // right:0;
+        // bottom:0;
+        // transform: translateX(-100%);
+        // transition: transform .5s;
+        // overflow-Y: scroll;
+        // background: #fff;
         overflow-Y: scroll;
         background: #fff;
+        min-height: 100vh;
+        display: none;
         &.event-all-show{
-            transform: translateX(0);
+            // transform: translateX(0);
+            display: block;
         }
         &::-webkit-scrollbar{
             width:0;
