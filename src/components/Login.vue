@@ -20,14 +20,40 @@
 <script>
   export default {
       data () {
+            let checkUsername = (rule, value, callback) => {
+                    if (value === '') {
+                        callback(new Error('请输入用户名'))
+                    } else {
+                        if (value == 'steven') {
+                            callback();
+                        }else{
+                            callback(new Error('用户名错误'))
+                        }
+                    }
+                };
+            let checkPassword = (rule, value, callback) => {
+                    if (value === '') {
+                        callback(new Error('请输入密码'));
+                    } else {
+                        if (value == 'aa123456') {
+                            callback();
+                        }else{
+                            callback(new Error('密码错误'))
+                        }
+                    }
+                };
           return {
               ruleForm: {
                   username: '',
                   password: ''
               },
               rules: {
-                  username: [{required: true, message: '请输入用户名' , trigger: 'blur'}],
-                  password: [{required: true, message: '请输入密码', trigger: 'blur'}]
+                    username: [
+                        { validator: checkUsername,  trigger: 'blur' }
+                    ],
+                    password: [
+                        { validator: checkPassword, trigger: 'blur' }
+                    ]
               }
           }
       },
