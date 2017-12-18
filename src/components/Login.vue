@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-      <div class="ls-title">洋哥逗着玩</div>
+      <div class="ls-title">Boss 管理系统</div>
       <div class="ls-login">
           <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="demo-ruleForm">
               <el-form-item prop="username">
