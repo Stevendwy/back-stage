@@ -27,11 +27,11 @@
           data: [
               {
                   "index": 1, 
-                  "name": "监控控制", 
+                  "name": "第三方接口", 
                   "subgroup": [
                       {
                           "code": "1.1", 
-                          "name": "第三方接口"
+                          "name": "Echarts"
                       }
                   ]
               }, 
@@ -41,11 +41,11 @@
                   "subgroup": [
                       {
                           "code": "2.1", 
-                          "name": "运营数据"
+                          "name": "记事本"
                       }, 
                       {
                           "code": "2.2", 
-                          "name": "品牌查询量"
+                          "name": "拖拽排序"
                       }, 
                       {
                           "code": "2.3", 
