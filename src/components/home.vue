@@ -40,6 +40,9 @@
             display: inline-flex;
             width: e('calc(100% - 200px)');
             background-color: #f2f2f2;
+            min-height: 100vh;
+            margin: 0 auto;
+            position: relative;
         }
     }
 </style>

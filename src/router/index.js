@@ -27,16 +27,13 @@ export default new Router({
           component: resolve => require(['@/components/echarts/ordinary.vue'], resolve)
         },{
           path: '/2.1',
-          component: resolve => require(['@/components/note/index.vue'], resolve)
+          component: resolve => require(['@/components/element/baseform.vue'], resolve)
         },{
           path: '/2.2',
           component: resolve => require(['@/components/element/draglist.vue'], resolve)
         },{
-          path: '/2.3',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
-        },{
           path: '/3.1',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/note/index.vue'], resolve)
         },{
           path: '/3.2',
           component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)

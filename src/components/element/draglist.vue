@@ -80,12 +80,12 @@
 <style scoped>
     .main{
         background: none repeat scroll 0 0 #fff;
-        position: absolute;
+        /* position: absolute;
         left: 200px;
         right: 0;
         top: 70px;
-        bottom:0;
-        width: auto;
+        bottom:0; */
+        width: 100%;
         padding:40px;
         box-sizing: border-box;
         overflow-y: scroll;
