@@ -31,7 +31,11 @@
                   "subgroup": [
                       {
                           "code": "1.1", 
-                          "name": "Echarts"
+                          "name": "EchartsMap"
+                      }, 
+                      {
+                          "code": "1.2", 
+                          "name": "EchartsUses"
                       }
                   ]
               }, 

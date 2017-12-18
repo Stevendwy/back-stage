@@ -23,6 +23,9 @@ export default new Router({
           path: '/1.1',
           component: resolve => require(['@/components/echarts/dashboard.vue'], resolve)
         },{
+          path: '/1.2',
+          component: resolve => require(['@/components/echarts/ordinary.vue'], resolve)
+        },{
           path: '/2.1',
           component: resolve => require(['@/components/note/index.vue'], resolve)
         },{
