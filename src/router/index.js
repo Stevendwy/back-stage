@@ -39,7 +39,7 @@ export default new Router({
           component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
         },{
           path: '/4.1',
-          component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
+          component: resolve => require(['@/components/picture/picture.vue'], resolve)
         },{
           path: '/4.2',
           component: resolve => require(['@/components/pagecontent/Thirdapi.vue'], resolve)
