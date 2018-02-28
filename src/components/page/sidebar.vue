@@ -74,13 +74,12 @@
                   "subgroup": [
                       {
                           "code": "4.1", 
+                          "name": "upLoadImg"
+                      }, 
+                      {
+                          "code": "4.2", 
                           "name": "Cropperjs"
                       }
-                    //   , 
-                    //   {
-                    //       "code": "4.2", 
-                    //       "name": "销售团队明细"
-                    //   }, 
                     //   {
                     //       "code": "4.3", 
                     //       "name": "现金记录"

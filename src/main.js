@@ -8,6 +8,7 @@ import store from '@/store/index'
 import axios from '@/lib/axios'
 import VueToast from 'vue2-toast'
 import 'vue2-toast/lib/toast.css'
+import exif from 'exif-js' //用于获取拍摄图片的基本信息（例如：拍摄方向）
 
 Vue.use(VueToast, {
   defaultType: 'center'
