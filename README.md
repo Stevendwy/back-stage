@@ -23,3 +23,6 @@ npm run build
 >vuex
 >axios
 >echart
+<img src="./static/img/echart.png"/>
+<img src="./static/img/echarts.png"/>
+<img src="./static/img/note.png"/>
